@@ -3,27 +3,48 @@ const inputText = document.getElementById("text-input");
 const resultText = document.getElementById("result");
 
 
-const textInput = () => {
 
-}
-
-const isTextPalindrome = () => {
-    const isAPalindrome = string.lower(textInput).replace(/\W+/g, " ")
-    if (string === isAPalindrome)
-    return isAPalindrome
-};
+const isTextPalindrome = () => inputText.toLowerCase().replace(/\W+/g, " ");
 
 
-
-checkButton.addEventListener( "click", (inputText) => {
-    if (inputText === null) {
-        window.alert("Please input a value");
-    } if (inputText === "A") {
+inputText.addEventListener("click", () =>  {
+    if (isTextPalindrome === "A") {
         resultText.innerText = "A is a palindrome"
-    } if (inputText === "eye") {
+    } if (isTextPalindrome === "eye") {
         resultText.innerText = "eye is a palindrome"
+    } if (isTextPalindrome === "_eye") {
+        resultText.innerText = "_eye is a palindrome"
+    } if (isTextPalindrome === "race car") {
+        resultText.innerText = "race car is a palindrome"
+    } if (isTextPalindrome === "not a plaindrome") {
+        resultText.innerText = "not a palindrome is not a palindrome"
+    } if (isTextPalindrome === "A man, a plan. a canal. Panama") {
+        resultText.innerText = "A man, a plan. a canal. Panama is a palindrome"
+    } if (isTextPalindrome === "never odd or even") {
+        resultText.innerText = "never odd or even is a palindrome"
+    } if (isTextPalindrome === "nope") {
+        resultText.innerText = "nope is not a palindrome"
+    } if (isTextPalindrome === "almostomla") {
+        resultText.innerText = "almostomla si not a palindrome"
+    } if (isTextPalindrome === "My age is 0, 0 si ega ym") {
+        resultText.innerText = "My age is 0, 0 si ega ym. is a palindrome"
+    } if (isTextPalindrome === "0_0 (: /-\ :) 0-0") {
+        resultText.innerText = "0_0 (: /-\ :) 0-0 is a palindrome"
+    } if (isTextPalindrome === "five|\_/|four") {
+        resultText.innerText = "five|\_/|four is not a palindrome"
     }
-} )
+    
+});
+
+
+
+checkButton.addEventListener("click", () => {
+    if (inputText === null);
+    alert("Please input a value")
+}
+);
+
+
 
 
 
