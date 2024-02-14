@@ -4,10 +4,14 @@ const resultText = document.getElementById("result");
 
 
 
-const isTextPalindrome = () => inputText.toLowerCase().replace(/\W+/g, " ");
+const isTextPalindrome = (inputText) => {
+    const inputTextPalindrome = inputText.toLowerCase().match("/[\W_]/g");
 
+    return inputTextPalindrome.join("") === 
+        inputTextPalindrome.reverse().join("");
+}
 
-inputText.addEventListener("click", () =>  {
+const outputTextPalindrome = (isTextPalindrome => {
     if (isTextPalindrome === "A") {
         resultText.innerText = "A is a palindrome"
     } if (isTextPalindrome === "eye") {
@@ -33,16 +37,22 @@ inputText.addEventListener("click", () =>  {
     } if (isTextPalindrome === "five|\_/|four") {
         resultText.innerText = "five|\_/|four is not a palindrome"
     }
-    
+
 });
 
 
+inputText.addEventListener(isTextPalindrome); 
+
+resultText.addEventListener("display")
+
 
 checkButton.addEventListener("click", () => {
-    if (inputText === null);
+    if (isTextPalindrome === null);
     alert("Please input a value")
 }
 );
+
+
 
 
 
