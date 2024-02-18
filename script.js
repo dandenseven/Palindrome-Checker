@@ -1,11 +1,26 @@
 const checkButton = document.getElementById("check-btn");
-const inputText = document.getElementById("text-input")
+const inputText = document.getElementById("text-input");
 const resultText = document.getElementById("result");
 
 
 
-const isTextPalindrome = () => { 
-    const inputTextPalindrome = str.inputText.toLowerCase().replace(/\W+/g, " ");
+// const isTextPalindrome = () => { 
+//     const inputTextPalindrome = str.inputText.toLowerCase().replace(/\W+/g, " ");
+//     const outputText = inputTextPalindrome.join("");
+//     const reverseOutputText = inputTextPalindrome.reverse().join("");
+
+//     if (outputText === reverseOutputText) {
+//         resultText.innerHTML = `${inputText.value} is a palindrome`;
+//     }   else {
+//         resultText.innerHTML = `${inputText.value} is not a palindrome`;
+//     }
+// };
+
+
+function isTextPalindrome(str)  { 
+
+    const inputTextPalindrome = str.toLowerCase().replace(/\W+/g, " ");
+    console.log(inputTextPalindrome)
     const outputText = inputTextPalindrome.join("");
     const reverseOutputText = inputTextPalindrome.reverse().join("");
 
@@ -15,8 +30,6 @@ const isTextPalindrome = () => {
         resultText.innerHTML = `${inputText.value} is not a palindrome`;
     }
 };
-
-
 
 // const outputTextPalindrome = (isTextPalindrome => {
 //     if (isTextPalindrome === "A") {
