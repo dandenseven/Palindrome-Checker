@@ -1,34 +1,33 @@
+// Accessing the elements in the DOM by ID
 const checkButton = document.getElementById("check-btn");
 const inputText = document.getElementById("text-input");
 const resultText = document.getElementById("result");
 
 
-
+// function checks sends an alert when check button is clicked with no value entered in the  text input
 function check() {
     const isValueText = inputText.value.trim();
-    if (isValueText === null) {
+    if (isValueText === "") {
     alert("Please input a value");
     
     } else {
         return;
-    }
-}
-
-
-function isTextPalindrome()  { 
-
-    const inputTextPalindrome = inputText.value.replace(/\W_/g, " ").toLowerCase();
-    const outputText = inputTextPalindrome.join("");
-    const reverseOutputText = inputTextPalindrome.reverse().join("");
-
-    if (outputText === reverseOutputText) {
-        resultText.innerHTML = `${inputTextPalindrome.value} is a palindrome`;
-    }   else {
-        resultText.innerHTML = `${inputTextPalindrome.value} is not a palindrome`;
-    }
+    } 
 };
 
 
+// function defines a palindrome using regex, making text the same case and reversing the order of text
+function isTextPalindrome()  { 
+    const isValueText = inputText.value.trim();
+    const inputTextPalindrome = isValueText.replace(/[^0-9a-zA-Z]/g, '').toLowerCase();
+    const reverseOutputText = inputTextPalindrome.split("").reverse().join("");
+
+    if (inputTextPalindrome === reverseOutputText) {
+        resultText.innerHTML = `${inputText.value} is a palindrome`;
+    }   else {
+        resultText.innerHTML = `${inputText.value} is not a palindrome`;
+    }
+};
 
 
 
