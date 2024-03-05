@@ -32,9 +32,9 @@ function isTextPalindrome()  {
 
 
 
-
+// checks if input is empty when the input is empty
 checkButton.addEventListener("click", check);
+
+// checks if the input is a palindrome 
 checkButton.addEventListener("click", isTextPalindrome);
 
-
-// const inputTextPalindrome = str.toLowerCase().replace(/\W_/g, " ");
